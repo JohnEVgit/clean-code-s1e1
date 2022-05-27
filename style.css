@@ -46,16 +46,16 @@
 }
 
 .tasks {
-  margin:0;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 .task, .title {
-  list-style:none;
+  list-style: none;
 }
 
 .task-input,.task-checkbox,.task-btn{
-  outline:none;
+  outline: none;
   box-sizing: border-box;
 }
 
@@ -63,7 +63,7 @@
   display: flex;
   justify-content: center;
   background: none;
-  border: 0px;
+  border: 0;
   color: #888;
   font-size: 15px;
   width: 60px;
@@ -160,14 +160,14 @@
 }
 
 .task-input {
-  display:none
+  display: none
 }
 
 .edit-mode .task-input {
-  display:inline-block;
-  width:224px
+  display: inline-block;
+  width: 224px
 }
 
 .edit-mode .task-label {
-  display:none;
+  display: none;
 }
