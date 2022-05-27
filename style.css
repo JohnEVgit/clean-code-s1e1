@@ -50,11 +50,14 @@
   padding: 0;
 }
 
-.task, .title {
+.task,
+.title {
   list-style: none;
 }
 
-.task-input,.task-checkbox,.task-btn{
+.task-input,
+.task-checkbox,
+.task-btn {
   outline: none;
   box-sizing: border-box;
 }
