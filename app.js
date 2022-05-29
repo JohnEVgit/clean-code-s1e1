@@ -35,26 +35,26 @@ var createNewTaskElement=function(taskString){
     listItem.className='task';
 
     label.innerText=taskString;
-    label.className='task-label';
+    label.className='task__label';
 
     //Each elements, needs appending
     checkBox.type="checkbox";
-    checkBox.className="task-checkbox";
-    label.className="task-label";
+    checkBox.className="task__checkbox";
+    label.className="task__label";
     editInput.type="text";
-    editInput.className="task-input";
+    editInput.className="task__input";
 
     editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
     editButton.type="button";
-    editButton.className="task-btn btn-edit";
+    editButton.className="task__btn task__btn--edit";
 
     deleteButton.type="button";
     deleteButton.title="Remove";
     deleteButton.ariaLabel="Remove";
-    deleteButton.className="task-btn btn-delete";
+    deleteButton.className="task__btn btn-delete";
     deleteButtonImg.src='./remove.svg';
     deleteButtonImg.alt='Remove';
-    deleteButtonImg.className="btn-delete-img"
+    deleteButtonImg.className="btn-delete__img"
     deleteButton.appendChild(deleteButtonImg);
 
 
@@ -92,10 +92,10 @@ var editTask=function(){
 
     var listItem=this.parentNode;
 
-    var editInput=listItem.querySelector('.task-input');
-    var label=listItem.querySelector(".task-label");
-    var editBtn=listItem.querySelector(".btn-edit");
-    var containsClass=listItem.classList.contains("edit-mode");
+    var editInput=listItem.querySelector('.task__input');
+    var label=listItem.querySelector(".task__label");
+    var editBtn=listItem.querySelector(".task__btn--edit");
+    var containsClass=listItem.classList.contains("task--edit-mode");
     //If class of the parent is .edit-mode
     if(containsClass){
 
@@ -109,7 +109,7 @@ var editTask=function(){
     }
 
     //toggle .edit-mode on the parent.
-    listItem.classList.toggle("edit-mode");
+    listItem.classList.toggle("task--edit-mode");
 };
 
 
@@ -165,8 +165,8 @@ addButton.addEventListener("click",ajaxRequest);
 var bindTaskEvents=function(taskListItem,checkBoxEventHandler){
     console.log("bind list item events");
 //select ListItems children
-    var checkBox=taskListItem.querySelector(".task-checkbox");
-    var editButton=taskListItem.querySelector(".btn-edit");
+    var checkBox=taskListItem.querySelector(".task__checkbox");
+    var editButton=taskListItem.querySelector(".task__btn--edit");
     var deleteButton=taskListItem.querySelector(".btn-delete");
 
 
